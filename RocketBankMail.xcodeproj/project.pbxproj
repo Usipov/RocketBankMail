@@ -1,0 +1,582 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		177BEDC017DA236000A50EFB /* ChevinCyrillic-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 177BEDBB17DA236000A50EFB /* ChevinCyrillic-Bold.ttf */; };
+		177BEDC117DA236000A50EFB /* ChevinCyrillic-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 177BEDBC17DA236000A50EFB /* ChevinCyrillic-BoldItalic.ttf */; };
+		177BEDC217DA236000A50EFB /* ChevinCyrillic-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 177BEDBD17DA236000A50EFB /* ChevinCyrillic-Light.ttf */; };
+		177BEDC317DA236000A50EFB /* ChevinCyrillic-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 177BEDBE17DA236000A50EFB /* ChevinCyrillic-LightItalic.ttf */; };
+		177BEDC417DA236000A50EFB /* G-Type - ChevinPro-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 177BEDBF17DA236000A50EFB /* G-Type - ChevinPro-Medium.otf */; };
+		17E436AF17D1F20A0096E52D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17E436AE17D1F20A0096E52D /* UIKit.framework */; };
+		17E436B117D1F20A0096E52D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17E436B017D1F20A0096E52D /* Foundation.framework */; };
+		17E436B317D1F20A0096E52D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17E436B217D1F20A0096E52D /* CoreGraphics.framework */; };
+		17E436B917D1F20A0096E52D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 17E436B717D1F20A0096E52D /* InfoPlist.strings */; };
+		17E436BB17D1F20A0096E52D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 17E436BA17D1F20A0096E52D /* main.m */; };
+		17E436BF17D1F20A0096E52D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 17E436BE17D1F20A0096E52D /* AppDelegate.m */; };
+		17E436C117D1F20A0096E52D /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 17E436C017D1F20A0096E52D /* Default.png */; };
+		17E436C317D1F20A0096E52D /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 17E436C217D1F20A0096E52D /* Default@2x.png */; };
+		17E436C517D1F20A0096E52D /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 17E436C417D1F20A0096E52D /* Default-568h@2x.png */; };
+		17E436CF17D1F2EF0096E52D /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17E436CE17D1F2EF0096E52D /* CoreData.framework */; };
+		17E436E117D1F5820096E52D /* RocketBankMail.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 17E436DF17D1F5820096E52D /* RocketBankMail.xcdatamodeld */; };
+		17E436E417D1F5A20096E52D /* CoreDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 17E436E317D1F5A20096E52D /* CoreDataManager.m */; };
+		17E436E717D1F5C00096E52D /* MailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 17E436E517D1F5C00096E52D /* MailsViewController.m */; };
+		17E436EA17D1FEC10096E52D /* MailItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 17E436E917D1FEC10096E52D /* MailItem.m */; };
+		17E436EE17D20E420096E52D /* MailDownloadManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 17E436ED17D20E420096E52D /* MailDownloadManager.m */; };
+		17E436F117D214E50096E52D /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 17E436F317D214E50096E52D /* Localizable.strings */; };
+		17E436F817D220DC0096E52D /* PlaceHolderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 17E436F717D220DC0096E52D /* PlaceHolderCell.m */; };
+		17E4370517D233F40096E52D /* DialogItemCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 17E4370417D233F40096E52D /* DialogItemCell.m */; };
+		17E4370817D4A1F40096E52D /* MailsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 17E4370717D4A1F40096E52D /* MailsView.m */; };
+		17E4371517D4EA030096E52D /* MailPageDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = 17E4371417D4EA030096E52D /* MailPageDownloader.m */; };
+		17E4372E17D6616E0096E52D /* MailBoxTimestampItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 17E4372C17D6616E0096E52D /* MailBoxTimestampItem.m */; };
+		17E4374B17D749850096E52D /* DialogItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 17E4374A17D749850096E52D /* DialogItem.m */; };
+		17E4374E17D749920096E52D /* MailBoxItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 17E4374D17D749910096E52D /* MailBoxItem.m */; };
+		17EC6B5317DA406600B4E357 /* check.png in Resources */ = {isa = PBXBuildFile; fileRef = 17EC6B4B17DA406600B4E357 /* check.png */; };
+		17EC6B5417DA406600B4E357 /* check@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 17EC6B4C17DA406600B4E357 /* check@2x.png */; };
+		17EC6B5517DA406600B4E357 /* cross.png in Resources */ = {isa = PBXBuildFile; fileRef = 17EC6B4D17DA406600B4E357 /* cross.png */; };
+		17EC6B5617DA406600B4E357 /* cross@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 17EC6B4E17DA406600B4E357 /* cross@2x.png */; };
+		17EC6B5717DA406600B4E357 /* navBar-Portrait.png in Resources */ = {isa = PBXBuildFile; fileRef = 17EC6B4F17DA406600B4E357 /* navBar-Portrait.png */; };
+		17EC6B5817DA406600B4E357 /* navBar-Portrait@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 17EC6B5017DA406600B4E357 /* navBar-Portrait@2x.png */; };
+		17EC6B5917DA406600B4E357 /* refresh-button-item.png in Resources */ = {isa = PBXBuildFile; fileRef = 17EC6B5117DA406600B4E357 /* refresh-button-item.png */; };
+		17EC6B5A17DA406600B4E357 /* refresh-button-item@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 17EC6B5217DA406600B4E357 /* refresh-button-item@2x.png */; };
+		17EC6B6817DA4F3900B4E357 /* segm_left.png in Resources */ = {isa = PBXBuildFile; fileRef = 17EC6B5C17DA4F3900B4E357 /* segm_left.png */; };
+		17EC6B6917DA4F3900B4E357 /* segm_left@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 17EC6B5D17DA4F3900B4E357 /* segm_left@2x.png */; };
+		17EC6B6A17DA4F3900B4E357 /* segm_left_hl.png in Resources */ = {isa = PBXBuildFile; fileRef = 17EC6B5E17DA4F3900B4E357 /* segm_left_hl.png */; };
+		17EC6B6B17DA4F3900B4E357 /* segm_left_hl@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 17EC6B5F17DA4F3900B4E357 /* segm_left_hl@2x.png */; };
+		17EC6B6C17DA4F3900B4E357 /* segm_mid.png in Resources */ = {isa = PBXBuildFile; fileRef = 17EC6B6017DA4F3900B4E357 /* segm_mid.png */; };
+		17EC6B6D17DA4F3900B4E357 /* segm_mid@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 17EC6B6117DA4F3900B4E357 /* segm_mid@2x.png */; };
+		17EC6B6E17DA4F3900B4E357 /* segm_mid_hl.png in Resources */ = {isa = PBXBuildFile; fileRef = 17EC6B6217DA4F3900B4E357 /* segm_mid_hl.png */; };
+		17EC6B6F17DA4F3900B4E357 /* segm_mid_hl@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 17EC6B6317DA4F3900B4E357 /* segm_mid_hl@2x.png */; };
+		17EC6B7017DA4F3900B4E357 /* segm_right.png in Resources */ = {isa = PBXBuildFile; fileRef = 17EC6B6417DA4F3900B4E357 /* segm_right.png */; };
+		17EC6B7117DA4F3900B4E357 /* segm_right@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 17EC6B6517DA4F3900B4E357 /* segm_right@2x.png */; };
+		17EC6B7217DA4F3900B4E357 /* segm_right_hl.png in Resources */ = {isa = PBXBuildFile; fileRef = 17EC6B6617DA4F3900B4E357 /* segm_right_hl.png */; };
+		17EC6B7317DA4F3900B4E357 /* segm_right_hl@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 17EC6B6717DA4F3900B4E357 /* segm_right_hl@2x.png */; };
+		17EC6B7617DA4F6B00B4E357 /* CustomSegmentedControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 17EC6B7517DA4F6B00B4E357 /* CustomSegmentedControl.m */; };
+		17EC6B7917DA5F9300B4E357 /* star.png in Resources */ = {isa = PBXBuildFile; fileRef = 17EC6B7717DA5F9300B4E357 /* star.png */; };
+		17EC6B7A17DA5F9300B4E357 /* star@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 17EC6B7817DA5F9300B4E357 /* star@2x.png */; };
+		17EC6B8117DB257C00B4E357 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17EC6B8017DB257B00B4E357 /* QuartzCore.framework */; };
+		17EC6B8D17DB315900B4E357 /* accessory.png in Resources */ = {isa = PBXBuildFile; fileRef = 17EC6B8B17DB315900B4E357 /* accessory.png */; };
+		17EC6B8E17DB315900B4E357 /* accessory@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 17EC6B8C17DB315900B4E357 /* accessory@2x.png */; };
+		17EC6B9117DB4ABE00B4E357 /* inbox.png in Resources */ = {isa = PBXBuildFile; fileRef = 17EC6B8F17DB4ABD00B4E357 /* inbox.png */; };
+		17EC6B9217DB4ABE00B4E357 /* inbox@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 17EC6B9017DB4ABD00B4E357 /* inbox@2x.png */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		177BEDBB17DA236000A50EFB /* ChevinCyrillic-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ChevinCyrillic-Bold.ttf"; sourceTree = "<group>"; };
+		177BEDBC17DA236000A50EFB /* ChevinCyrillic-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ChevinCyrillic-BoldItalic.ttf"; sourceTree = "<group>"; };
+		177BEDBD17DA236000A50EFB /* ChevinCyrillic-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ChevinCyrillic-Light.ttf"; sourceTree = "<group>"; };
+		177BEDBE17DA236000A50EFB /* ChevinCyrillic-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ChevinCyrillic-LightItalic.ttf"; sourceTree = "<group>"; };
+		177BEDBF17DA236000A50EFB /* G-Type - ChevinPro-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "G-Type - ChevinPro-Medium.otf"; sourceTree = "<group>"; };
+		17E436AA17D1F20A0096E52D /* RocketBankMail.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RocketBankMail.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		17E436AE17D1F20A0096E52D /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		17E436B017D1F20A0096E52D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		17E436B217D1F20A0096E52D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		17E436B617D1F20A0096E52D /* RocketBankMail-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "RocketBankMail-Info.plist"; sourceTree = "<group>"; };
+		17E436B817D1F20A0096E52D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		17E436BA17D1F20A0096E52D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		17E436BC17D1F20A0096E52D /* RocketBankMail-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RocketBankMail-Prefix.pch"; sourceTree = "<group>"; };
+		17E436BD17D1F20A0096E52D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		17E436BE17D1F20A0096E52D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		17E436C017D1F20A0096E52D /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		17E436C217D1F20A0096E52D /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		17E436C417D1F20A0096E52D /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		17E436CE17D1F2EF0096E52D /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		17E436E017D1F5820096E52D /* RocketBankMail.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = RocketBankMail.xcdatamodel; sourceTree = "<group>"; };
+		17E436E217D1F5A20096E52D /* CoreDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CoreDataManager.h; path = Sources/CoreData/CoreDataManager.h; sourceTree = SOURCE_ROOT; };
+		17E436E317D1F5A20096E52D /* CoreDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CoreDataManager.m; path = Sources/CoreData/CoreDataManager.m; sourceTree = SOURCE_ROOT; };
+		17E436E517D1F5C00096E52D /* MailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MailsViewController.m; path = "Sources/View + Controller/MailsViewController.m"; sourceTree = SOURCE_ROOT; };
+		17E436E617D1F5C00096E52D /* MailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MailsViewController.h; path = "Sources/View + Controller/MailsViewController.h"; sourceTree = SOURCE_ROOT; };
+		17E436E817D1FEC10096E52D /* MailItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MailItem.h; path = Sources/CoreData/MailItem.h; sourceTree = SOURCE_ROOT; };
+		17E436E917D1FEC10096E52D /* MailItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MailItem.m; path = Sources/CoreData/MailItem.m; sourceTree = SOURCE_ROOT; };
+		17E436EC17D20E420096E52D /* MailDownloadManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MailDownloadManager.h; path = Sources/MailListDownloader/MailDownloadManager.h; sourceTree = SOURCE_ROOT; };
+		17E436ED17D20E420096E52D /* MailDownloadManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MailDownloadManager.m; path = Sources/MailListDownloader/MailDownloadManager.m; sourceTree = SOURCE_ROOT; };
+		17E436F217D214E50096E52D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		17E436F417D215160096E52D /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		17E436F517D215160096E52D /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
+		17E436F617D220DC0096E52D /* PlaceHolderCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PlaceHolderCell.h; path = "Sources/View + Controller/PlaceHolderCell.h"; sourceTree = SOURCE_ROOT; };
+		17E436F717D220DC0096E52D /* PlaceHolderCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PlaceHolderCell.m; path = "Sources/View + Controller/PlaceHolderCell.m"; sourceTree = SOURCE_ROOT; };
+		17E4370317D233F40096E52D /* DialogItemCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DialogItemCell.h; path = "Sources/View + Controller/DialogItemCell.h"; sourceTree = SOURCE_ROOT; };
+		17E4370417D233F40096E52D /* DialogItemCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DialogItemCell.m; path = "Sources/View + Controller/DialogItemCell.m"; sourceTree = SOURCE_ROOT; };
+		17E4370617D4A1F40096E52D /* MailsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MailsView.h; path = "Sources/View + Controller/MailsView.h"; sourceTree = SOURCE_ROOT; };
+		17E4370717D4A1F40096E52D /* MailsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MailsView.m; path = "Sources/View + Controller/MailsView.m"; sourceTree = SOURCE_ROOT; };
+		17E4371317D4EA030096E52D /* MailPageDownloader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MailPageDownloader.h; sourceTree = "<group>"; };
+		17E4371417D4EA030096E52D /* MailPageDownloader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MailPageDownloader.m; sourceTree = "<group>"; };
+		17E4372C17D6616E0096E52D /* MailBoxTimestampItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MailBoxTimestampItem.m; path = Sources/CoreData/MailBoxTimestampItem.m; sourceTree = SOURCE_ROOT; };
+		17E4372D17D6616E0096E52D /* MailBoxTimestampItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MailBoxTimestampItem.h; path = Sources/CoreData/MailBoxTimestampItem.h; sourceTree = SOURCE_ROOT; };
+		17E4374917D749850096E52D /* DialogItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DialogItem.h; path = Sources/CoreData/DialogItem.h; sourceTree = SOURCE_ROOT; };
+		17E4374A17D749850096E52D /* DialogItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DialogItem.m; path = Sources/CoreData/DialogItem.m; sourceTree = SOURCE_ROOT; };
+		17E4374C17D749910096E52D /* MailBoxItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MailBoxItem.h; path = Sources/CoreData/MailBoxItem.h; sourceTree = SOURCE_ROOT; };
+		17E4374D17D749910096E52D /* MailBoxItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MailBoxItem.m; path = Sources/CoreData/MailBoxItem.m; sourceTree = SOURCE_ROOT; };
+		17EC6B4B17DA406600B4E357 /* check.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = check.png; sourceTree = "<group>"; };
+		17EC6B4C17DA406600B4E357 /* check@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "check@2x.png"; sourceTree = "<group>"; };
+		17EC6B4D17DA406600B4E357 /* cross.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cross.png; sourceTree = "<group>"; };
+		17EC6B4E17DA406600B4E357 /* cross@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cross@2x.png"; sourceTree = "<group>"; };
+		17EC6B4F17DA406600B4E357 /* navBar-Portrait.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "navBar-Portrait.png"; sourceTree = "<group>"; };
+		17EC6B5017DA406600B4E357 /* navBar-Portrait@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "navBar-Portrait@2x.png"; sourceTree = "<group>"; };
+		17EC6B5117DA406600B4E357 /* refresh-button-item.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "refresh-button-item.png"; sourceTree = "<group>"; };
+		17EC6B5217DA406600B4E357 /* refresh-button-item@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "refresh-button-item@2x.png"; sourceTree = "<group>"; };
+		17EC6B5C17DA4F3900B4E357 /* segm_left.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = segm_left.png; sourceTree = "<group>"; };
+		17EC6B5D17DA4F3900B4E357 /* segm_left@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "segm_left@2x.png"; sourceTree = "<group>"; };
+		17EC6B5E17DA4F3900B4E357 /* segm_left_hl.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = segm_left_hl.png; sourceTree = "<group>"; };
+		17EC6B5F17DA4F3900B4E357 /* segm_left_hl@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "segm_left_hl@2x.png"; sourceTree = "<group>"; };
+		17EC6B6017DA4F3900B4E357 /* segm_mid.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = segm_mid.png; sourceTree = "<group>"; };
+		17EC6B6117DA4F3900B4E357 /* segm_mid@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "segm_mid@2x.png"; sourceTree = "<group>"; };
+		17EC6B6217DA4F3900B4E357 /* segm_mid_hl.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = segm_mid_hl.png; sourceTree = "<group>"; };
+		17EC6B6317DA4F3900B4E357 /* segm_mid_hl@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "segm_mid_hl@2x.png"; sourceTree = "<group>"; };
+		17EC6B6417DA4F3900B4E357 /* segm_right.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = segm_right.png; sourceTree = "<group>"; };
+		17EC6B6517DA4F3900B4E357 /* segm_right@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "segm_right@2x.png"; sourceTree = "<group>"; };
+		17EC6B6617DA4F3900B4E357 /* segm_right_hl.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = segm_right_hl.png; sourceTree = "<group>"; };
+		17EC6B6717DA4F3900B4E357 /* segm_right_hl@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "segm_right_hl@2x.png"; sourceTree = "<group>"; };
+		17EC6B7417DA4F6B00B4E357 /* CustomSegmentedControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CustomSegmentedControl.h; path = "Sources/View + Controller/CustomSegmentedControl.h"; sourceTree = SOURCE_ROOT; };
+		17EC6B7517DA4F6B00B4E357 /* CustomSegmentedControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CustomSegmentedControl.m; path = "Sources/View + Controller/CustomSegmentedControl.m"; sourceTree = SOURCE_ROOT; };
+		17EC6B7717DA5F9300B4E357 /* star.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = star.png; sourceTree = "<group>"; };
+		17EC6B7817DA5F9300B4E357 /* star@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "star@2x.png"; sourceTree = "<group>"; };
+		17EC6B8017DB257B00B4E357 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		17EC6B8B17DB315900B4E357 /* accessory.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = accessory.png; sourceTree = "<group>"; };
+		17EC6B8C17DB315900B4E357 /* accessory@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "accessory@2x.png"; sourceTree = "<group>"; };
+		17EC6B8F17DB4ABD00B4E357 /* inbox.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = inbox.png; sourceTree = "<group>"; };
+		17EC6B9017DB4ABD00B4E357 /* inbox@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "inbox@2x.png"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		17E436A717D1F20A0096E52D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				17EC6B8117DB257C00B4E357 /* QuartzCore.framework in Frameworks */,
+				17E436CF17D1F2EF0096E52D /* CoreData.framework in Frameworks */,
+				17E436AF17D1F20A0096E52D /* UIKit.framework in Frameworks */,
+				17E436B117D1F20A0096E52D /* Foundation.framework in Frameworks */,
+				17E436B317D1F20A0096E52D /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		177BEDBA17DA236000A50EFB /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				177BEDBB17DA236000A50EFB /* ChevinCyrillic-Bold.ttf */,
+				177BEDBC17DA236000A50EFB /* ChevinCyrillic-BoldItalic.ttf */,
+				177BEDBD17DA236000A50EFB /* ChevinCyrillic-Light.ttf */,
+				177BEDBE17DA236000A50EFB /* ChevinCyrillic-LightItalic.ttf */,
+				177BEDBF17DA236000A50EFB /* G-Type - ChevinPro-Medium.otf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		17E4369F17D1F20A0096E52D = {
+			isa = PBXGroup;
+			children = (
+				17E436B417D1F20A0096E52D /* RocketBankMail */,
+				17E436AD17D1F20A0096E52D /* Frameworks */,
+				17E436AB17D1F20A0096E52D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		17E436AB17D1F20A0096E52D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				17E436AA17D1F20A0096E52D /* RocketBankMail.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		17E436AD17D1F20A0096E52D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				17E436AE17D1F20A0096E52D /* UIKit.framework */,
+				17E436B017D1F20A0096E52D /* Foundation.framework */,
+				17E436B217D1F20A0096E52D /* CoreGraphics.framework */,
+				17EC6B8017DB257B00B4E357 /* QuartzCore.framework */,
+				17E436CE17D1F2EF0096E52D /* CoreData.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		17E436B417D1F20A0096E52D /* RocketBankMail */ = {
+			isa = PBXGroup;
+			children = (
+				17E436BD17D1F20A0096E52D /* AppDelegate.h */,
+				17E436BE17D1F20A0096E52D /* AppDelegate.m */,
+				17E436D117D1F30F0096E52D /* View + Controller */,
+				17E436EB17D20C620096E52D /* MailListDownloader */,
+				17E436D017D1F2FD0096E52D /* CoreData */,
+				17E436B517D1F20A0096E52D /* Supporting Files */,
+			);
+			path = RocketBankMail;
+			sourceTree = "<group>";
+		};
+		17E436B517D1F20A0096E52D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				177BEDBA17DA236000A50EFB /* Fonts */,
+				17EC6B4A17DA406600B4E357 /* Images */,
+				17E436B617D1F20A0096E52D /* RocketBankMail-Info.plist */,
+				17E436B717D1F20A0096E52D /* InfoPlist.strings */,
+				17E436F317D214E50096E52D /* Localizable.strings */,
+				17E436BA17D1F20A0096E52D /* main.m */,
+				17E436BC17D1F20A0096E52D /* RocketBankMail-Prefix.pch */,
+				17E436C017D1F20A0096E52D /* Default.png */,
+				17E436C217D1F20A0096E52D /* Default@2x.png */,
+				17E436C417D1F20A0096E52D /* Default-568h@2x.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		17E436D017D1F2FD0096E52D /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				17E436DF17D1F5820096E52D /* RocketBankMail.xcdatamodeld */,
+				17E436E217D1F5A20096E52D /* CoreDataManager.h */,
+				17E436E317D1F5A20096E52D /* CoreDataManager.m */,
+				17E4374F17D749A60096E52D /* Managed Objects */,
+			);
+			name = CoreData;
+			sourceTree = "<group>";
+		};
+		17E436D117D1F30F0096E52D /* View + Controller */ = {
+			isa = PBXGroup;
+			children = (
+				17E436E617D1F5C00096E52D /* MailsViewController.h */,
+				17E436E517D1F5C00096E52D /* MailsViewController.m */,
+				17E4370617D4A1F40096E52D /* MailsView.h */,
+				17E4370717D4A1F40096E52D /* MailsView.m */,
+				17E436F617D220DC0096E52D /* PlaceHolderCell.h */,
+				17E436F717D220DC0096E52D /* PlaceHolderCell.m */,
+				17E4370317D233F40096E52D /* DialogItemCell.h */,
+				17E4370417D233F40096E52D /* DialogItemCell.m */,
+				17EC6B7417DA4F6B00B4E357 /* CustomSegmentedControl.h */,
+				17EC6B7517DA4F6B00B4E357 /* CustomSegmentedControl.m */,
+			);
+			name = "View + Controller";
+			sourceTree = "<group>";
+		};
+		17E436EB17D20C620096E52D /* MailListDownloader */ = {
+			isa = PBXGroup;
+			children = (
+				17E436EC17D20E420096E52D /* MailDownloadManager.h */,
+				17E436ED17D20E420096E52D /* MailDownloadManager.m */,
+				17E4371317D4EA030096E52D /* MailPageDownloader.h */,
+				17E4371417D4EA030096E52D /* MailPageDownloader.m */,
+			);
+			name = MailListDownloader;
+			path = Sources/MailListDownloader;
+			sourceTree = SOURCE_ROOT;
+		};
+		17E4374F17D749A60096E52D /* Managed Objects */ = {
+			isa = PBXGroup;
+			children = (
+				17E4374C17D749910096E52D /* MailBoxItem.h */,
+				17E4374D17D749910096E52D /* MailBoxItem.m */,
+				17E4374917D749850096E52D /* DialogItem.h */,
+				17E4374A17D749850096E52D /* DialogItem.m */,
+				17E436E817D1FEC10096E52D /* MailItem.h */,
+				17E436E917D1FEC10096E52D /* MailItem.m */,
+				17E4372D17D6616E0096E52D /* MailBoxTimestampItem.h */,
+				17E4372C17D6616E0096E52D /* MailBoxTimestampItem.m */,
+			);
+			name = "Managed Objects";
+			sourceTree = "<group>";
+		};
+		17EC6B4A17DA406600B4E357 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				17EC6B8B17DB315900B4E357 /* accessory.png */,
+				17EC6B8C17DB315900B4E357 /* accessory@2x.png */,
+				17EC6B7717DA5F9300B4E357 /* star.png */,
+				17EC6B7817DA5F9300B4E357 /* star@2x.png */,
+				17EC6B4B17DA406600B4E357 /* check.png */,
+				17EC6B4C17DA406600B4E357 /* check@2x.png */,
+				17EC6B4D17DA406600B4E357 /* cross.png */,
+				17EC6B4E17DA406600B4E357 /* cross@2x.png */,
+				17EC6B8F17DB4ABD00B4E357 /* inbox.png */,
+				17EC6B9017DB4ABD00B4E357 /* inbox@2x.png */,
+				17EC6B4F17DA406600B4E357 /* navBar-Portrait.png */,
+				17EC6B5017DA406600B4E357 /* navBar-Portrait@2x.png */,
+				17EC6B5117DA406600B4E357 /* refresh-button-item.png */,
+				17EC6B5217DA406600B4E357 /* refresh-button-item@2x.png */,
+				17EC6B5B17DA4F3900B4E357 /* Segmented control */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
+		17EC6B5B17DA4F3900B4E357 /* Segmented control */ = {
+			isa = PBXGroup;
+			children = (
+				17EC6B5C17DA4F3900B4E357 /* segm_left.png */,
+				17EC6B5D17DA4F3900B4E357 /* segm_left@2x.png */,
+				17EC6B5E17DA4F3900B4E357 /* segm_left_hl.png */,
+				17EC6B5F17DA4F3900B4E357 /* segm_left_hl@2x.png */,
+				17EC6B6017DA4F3900B4E357 /* segm_mid.png */,
+				17EC6B6117DA4F3900B4E357 /* segm_mid@2x.png */,
+				17EC6B6217DA4F3900B4E357 /* segm_mid_hl.png */,
+				17EC6B6317DA4F3900B4E357 /* segm_mid_hl@2x.png */,
+				17EC6B6417DA4F3900B4E357 /* segm_right.png */,
+				17EC6B6517DA4F3900B4E357 /* segm_right@2x.png */,
+				17EC6B6617DA4F3900B4E357 /* segm_right_hl.png */,
+				17EC6B6717DA4F3900B4E357 /* segm_right_hl@2x.png */,
+			);
+			path = "Segmented control";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		17E436A917D1F20A0096E52D /* RocketBankMail */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 17E436C817D1F20A0096E52D /* Build configuration list for PBXNativeTarget "RocketBankMail" */;
+			buildPhases = (
+				17E436A617D1F20A0096E52D /* Sources */,
+				17E436A717D1F20A0096E52D /* Frameworks */,
+				17E436A817D1F20A0096E52D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RocketBankMail;
+			productName = RocketBankMail;
+			productReference = 17E436AA17D1F20A0096E52D /* RocketBankMail.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		17E436A117D1F20A0096E52D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0450;
+				ORGANIZATIONNAME = "Usipov Timur";
+			};
+			buildConfigurationList = 17E436A417D1F20A0096E52D /* Build configuration list for PBXProject "RocketBankMail" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				ru,
+			);
+			mainGroup = 17E4369F17D1F20A0096E52D;
+			productRefGroup = 17E436AB17D1F20A0096E52D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				17E436A917D1F20A0096E52D /* RocketBankMail */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		17E436A817D1F20A0096E52D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				17E436B917D1F20A0096E52D /* InfoPlist.strings in Resources */,
+				17E436C117D1F20A0096E52D /* Default.png in Resources */,
+				17E436C317D1F20A0096E52D /* Default@2x.png in Resources */,
+				17E436C517D1F20A0096E52D /* Default-568h@2x.png in Resources */,
+				17E436F117D214E50096E52D /* Localizable.strings in Resources */,
+				177BEDC017DA236000A50EFB /* ChevinCyrillic-Bold.ttf in Resources */,
+				177BEDC117DA236000A50EFB /* ChevinCyrillic-BoldItalic.ttf in Resources */,
+				177BEDC217DA236000A50EFB /* ChevinCyrillic-Light.ttf in Resources */,
+				177BEDC317DA236000A50EFB /* ChevinCyrillic-LightItalic.ttf in Resources */,
+				177BEDC417DA236000A50EFB /* G-Type - ChevinPro-Medium.otf in Resources */,
+				17EC6B5317DA406600B4E357 /* check.png in Resources */,
+				17EC6B5417DA406600B4E357 /* check@2x.png in Resources */,
+				17EC6B5517DA406600B4E357 /* cross.png in Resources */,
+				17EC6B5617DA406600B4E357 /* cross@2x.png in Resources */,
+				17EC6B5717DA406600B4E357 /* navBar-Portrait.png in Resources */,
+				17EC6B5817DA406600B4E357 /* navBar-Portrait@2x.png in Resources */,
+				17EC6B5917DA406600B4E357 /* refresh-button-item.png in Resources */,
+				17EC6B5A17DA406600B4E357 /* refresh-button-item@2x.png in Resources */,
+				17EC6B6817DA4F3900B4E357 /* segm_left.png in Resources */,
+				17EC6B6917DA4F3900B4E357 /* segm_left@2x.png in Resources */,
+				17EC6B6A17DA4F3900B4E357 /* segm_left_hl.png in Resources */,
+				17EC6B6B17DA4F3900B4E357 /* segm_left_hl@2x.png in Resources */,
+				17EC6B6C17DA4F3900B4E357 /* segm_mid.png in Resources */,
+				17EC6B6D17DA4F3900B4E357 /* segm_mid@2x.png in Resources */,
+				17EC6B6E17DA4F3900B4E357 /* segm_mid_hl.png in Resources */,
+				17EC6B6F17DA4F3900B4E357 /* segm_mid_hl@2x.png in Resources */,
+				17EC6B7017DA4F3900B4E357 /* segm_right.png in Resources */,
+				17EC6B7117DA4F3900B4E357 /* segm_right@2x.png in Resources */,
+				17EC6B7217DA4F3900B4E357 /* segm_right_hl.png in Resources */,
+				17EC6B7317DA4F3900B4E357 /* segm_right_hl@2x.png in Resources */,
+				17EC6B7917DA5F9300B4E357 /* star.png in Resources */,
+				17EC6B7A17DA5F9300B4E357 /* star@2x.png in Resources */,
+				17EC6B8D17DB315900B4E357 /* accessory.png in Resources */,
+				17EC6B8E17DB315900B4E357 /* accessory@2x.png in Resources */,
+				17EC6B9117DB4ABE00B4E357 /* inbox.png in Resources */,
+				17EC6B9217DB4ABE00B4E357 /* inbox@2x.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		17E436A617D1F20A0096E52D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				17E436BB17D1F20A0096E52D /* main.m in Sources */,
+				17E436BF17D1F20A0096E52D /* AppDelegate.m in Sources */,
+				17E436E117D1F5820096E52D /* RocketBankMail.xcdatamodeld in Sources */,
+				17E436E417D1F5A20096E52D /* CoreDataManager.m in Sources */,
+				17E436E717D1F5C00096E52D /* MailsViewController.m in Sources */,
+				17E436EA17D1FEC10096E52D /* MailItem.m in Sources */,
+				17E436EE17D20E420096E52D /* MailDownloadManager.m in Sources */,
+				17E436F817D220DC0096E52D /* PlaceHolderCell.m in Sources */,
+				17E4370517D233F40096E52D /* DialogItemCell.m in Sources */,
+				17E4370817D4A1F40096E52D /* MailsView.m in Sources */,
+				17E4371517D4EA030096E52D /* MailPageDownloader.m in Sources */,
+				17E4372E17D6616E0096E52D /* MailBoxTimestampItem.m in Sources */,
+				17E4374B17D749850096E52D /* DialogItem.m in Sources */,
+				17E4374E17D749920096E52D /* MailBoxItem.m in Sources */,
+				17EC6B7617DA4F6B00B4E357 /* CustomSegmentedControl.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		17E436B717D1F20A0096E52D /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				17E436B817D1F20A0096E52D /* en */,
+				17E436F417D215160096E52D /* ru */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		17E436F317D214E50096E52D /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				17E436F217D214E50096E52D /* en */,
+				17E436F517D215160096E52D /* ru */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		17E436C617D1F20A0096E52D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		17E436C717D1F20A0096E52D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		17E436C917D1F20A0096E52D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "RocketBankMail/RocketBankMail-Prefix.pch";
+				INFOPLIST_FILE = "RocketBankMail/RocketBankMail-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		17E436CA17D1F20A0096E52D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "RocketBankMail/RocketBankMail-Prefix.pch";
+				INFOPLIST_FILE = "RocketBankMail/RocketBankMail-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		17E436A417D1F20A0096E52D /* Build configuration list for PBXProject "RocketBankMail" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				17E436C617D1F20A0096E52D /* Debug */,
+				17E436C717D1F20A0096E52D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		17E436C817D1F20A0096E52D /* Build configuration list for PBXNativeTarget "RocketBankMail" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				17E436C917D1F20A0096E52D /* Debug */,
+				17E436CA17D1F20A0096E52D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		17E436DF17D1F5820096E52D /* RocketBankMail.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				17E436E017D1F5820096E52D /* RocketBankMail.xcdatamodel */,
+			);
+			currentVersion = 17E436E017D1F5820096E52D /* RocketBankMail.xcdatamodel */;
+			name = RocketBankMail.xcdatamodeld;
+			path = ../Sources/CoreData/RocketBankMail.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 17E436A117D1F20A0096E52D /* Project object */;
+}

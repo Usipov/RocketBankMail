@@ -1,0 +1,22 @@
+//
+// Prefix header for all source files of the 'RocketBankMail' target in the 'RocketBankMail' project
+//
+
+#import <Availability.h>
+
+#ifndef __IPHONE_3_0
+#warning "This project uses features only available in iOS SDK 3.0 and later."
+#endif
+
+#ifdef __OBJC__
+    #import <UIKit/UIKit.h>
+    #import <Foundation/Foundation.h>
+#endif
+
+
+#define kRocketBankMailErrorDomain @"RocketBankMailDomain"
+
+#define IS_PAD()                ([UIDevice currentDevice].userInterfaceIdiom == UIUserInterfaceIdiomPad)
+
+#define kAPP_ORIENTATION()      [[UIApplication sharedApplication] statusBarOrientation]
+#define kANIMATION_DURATION     0.25

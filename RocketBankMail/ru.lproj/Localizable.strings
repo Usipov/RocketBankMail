@@ -1,0 +1,19 @@
+/* 
+  Localizable.strings
+  RocketBankMail
+
+  Created by Тимур Юсипов on 31.08.13.
+  Copyright (c) 2013 Usipov Timur. All rights reserved.
+*/
+
+//errors
+"ErorrDescriptionWhileParsing" = "Не удолось разоброть JSON";
+"ErrorFailureReasonWhileParsing" = "Разбор JSON'а не реализован в вашей версии iOS";
+
+//table view cell
+"downloading" = "Загрузка ...";
+
+//default mailboxes' titles
+"mailbox archived title" = "Архив";
+"mailbox inboxed title" = "Входящие";
+"mailbox trashed title" = "Кoрзина";

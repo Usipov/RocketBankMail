@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model name="" userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="1811" systemVersion="11G63b" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="DialogItem" representedClassName="DialogItem" syncable="YES">
+        <attribute name="efficientDate" optional="YES" attributeType="Date" syncable="YES"/>
+        <relationship name="mailboxItem" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="MailBoxItem" inverseName="dialogItems" inverseEntity="MailBoxItem" syncable="YES"/>
+        <relationship name="mailItems" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="MailItem" inverseName="dialogItem" inverseEntity="MailItem" syncable="YES"/>
+    </entity>
+    <entity name="MailBoxItem" representedClassName="MailBoxItem" syncable="YES">
+        <attribute name="createdAt" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="isImmutable" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="mailBoxTitle" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="url" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="dialogItems" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="DialogItem" inverseName="mailboxItem" inverseEntity="DialogItem" syncable="YES"/>
+    </entity>
+    <entity name="MailBoxTimestampItem" representedClassName="MailBoxDownloadItem" syncable="YES">
+        <attribute name="pagesDownloadedSinceRelevantItem" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <relationship name="relevantMailItem" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="MailItem" inverseName="timestampItem" inverseEntity="MailItem" syncable="YES"/>
+    </entity>
+    <entity name="MailItem" representedClassName="MailItem" syncable="YES">
+        <attribute name="body" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="from" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="identifier" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="inReplyToIdentifier" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="messages" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="recievedAt" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="starred" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="subject" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="to" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="dialogItem" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="DialogItem" inverseName="mailItems" inverseEntity="DialogItem" syncable="YES"/>
+        <relationship name="replyTargetItem" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="MailItem" syncable="YES"/>
+        <relationship name="timestampItem" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="MailBoxTimestampItem" inverseName="relevantMailItem" inverseEntity="MailBoxTimestampItem" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="MailItem" positionX="-270" positionY="-297" width="128" height="225"/>
+        <element name="MailBoxTimestampItem" positionX="-342" positionY="96" width="128" height="75"/>
+        <element name="DialogItem" positionX="133" positionY="60" width="128" height="90"/>
+        <element name="MailBoxItem" positionX="61" positionY="-189" width="128" height="120"/>
+    </elements>
+</model>
