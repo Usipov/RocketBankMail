@@ -21,12 +21,13 @@
 #define kSTAR_SIZE 30.0f
 #define kACTION_INDICATOR_SIZE 30.0f
 
-#define kFIRST_CHECKPOINT_RATIO 0.33
-#define kSECOND_CHECKPOINT_RATIO 0.66
+#define kFIRST_CHECKPOINT_LENGTH 60.0f
+#define kSECOND_CHECKPOINT_LENGTH 185.0f
 
 #define kARCHIVE_COLOR()    [UIColor colorWithRed: 0.9 green: 0.9 blue: 0.06 alpha: 1.0]
 #define kINBOX_COLOR()      [UIColor colorWithRed: 0.1 green: 1.0 blue: 0.1 alpha: 1.0]
 #define kTRASH_COLOR()      [UIColor colorWithRed: 1.0 green: 0.1 blue: 0.1 alpha: 1.0]
+#define kNO_ACTION_COLOR()  [UIColor colorWithWhite: 0.75 alpha: 1.0]
 #define kDEFAULT_COLOR()    [UIColor whiteColor]
 
 /* fonts
@@ -49,7 +50,11 @@
     
     //for pan gestures
     UIPanGestureRecognizer *_panRecognizer;
+    
     CGPoint                 _originalContentViewCenter;
+    CGPoint                 _originalLeftActionIndicatorCenter;
+    CGPoint                 _originalRightActionIndicatorCenter;
+    
     BOOL                    _leftSwipeOccured;
     BOOL                    _leftLongSwipeOccured;
     BOOL                    _rightSwipeOccured;
@@ -78,7 +83,7 @@
 -(void)createPanGesture;
 -(void)createSubviewsForPanGesture;
 -(void)handlePanGesture: (UIPanGestureRecognizer *)gesture;
--(void)handlePanOffset: (CGFloat)offset;
+-(void)handlePanTranslation: (CGFloat)translation;
 -(void)handleTriggeredAction;
 -(UIColor *)colorForAction: (DialogItemCellActionType)action;
 -(UIImage *)imageForAction: (DialogItemCellActionType)action;
@@ -153,6 +158,16 @@
     [super prepareForReuse];
     
     _coloredView.backgroundColor = [UIColor clearColor];
+    
+    if (false == CGPointEqualToPoint(_originalContentViewCenter, CGPointZero)) {
+        self.contentView.center = _originalContentViewCenter;
+    }
+    if (false == CGPointEqualToPoint(_originalLeftActionIndicatorCenter, CGPointZero)) {
+        _leftActionIndicatorView.center = _originalLeftActionIndicatorCenter;
+    }
+    if (false == CGPointEqualToPoint(_originalRightActionIndicatorCenter, CGPointZero)) {
+        _rightActionIndicatorView.center = _originalRightActionIndicatorCenter;
+    }
 }
 
 -(void)layoutSubviews
@@ -290,23 +305,22 @@
     if (gesture.state == UIGestureRecognizerStateBegan) {
 		// if the gesture has just started, record the current centre location
         _originalContentViewCenter = self.contentView.center;
+        _originalLeftActionIndicatorCenter = _leftActionIndicatorView.center;
+        _originalRightActionIndicatorCenter = _rightActionIndicatorView.center;
     }
     
     if (gesture.state == UIGestureRecognizerStateChanged) {
         // translate the center
         CGPoint translation = [gesture translationInView: self];
-        self.contentView.center = CGPointMake(_originalContentViewCenter.x + translation.x, _originalContentViewCenter.y);
-        
-        CGFloat width = self.frame.size.width;
-        
+    
         //compute flags
-        _rightSwipeOccured      = translation.x / width > kFIRST_CHECKPOINT_RATIO;
-        _rightLongSwipeOccured  = translation.x / width > kSECOND_CHECKPOINT_RATIO;
-        _leftSwipeOccured       = translation.x / width < - kFIRST_CHECKPOINT_RATIO;
-        _leftLongSwipeOccured   = translation.x / width < - kSECOND_CHECKPOINT_RATIO;
+        _rightSwipeOccured      = translation.x > kFIRST_CHECKPOINT_LENGTH;
+        _rightLongSwipeOccured  = translation.x > kSECOND_CHECKPOINT_LENGTH;
+        _leftSwipeOccured       = translation.x  < - kFIRST_CHECKPOINT_LENGTH;
+        _leftLongSwipeOccured   = translation.x < - kSECOND_CHECKPOINT_LENGTH;
         
         //handle other views
-        [self handlePanOffset: translation.x];
+        [self handlePanTranslation: translation.x];
     }
     
     if (gesture.state == UIGestureRecognizerStateEnded) {
@@ -323,29 +337,73 @@
     }
 }
 
--(void)handlePanOffset: (CGFloat)offset
+-(void)handlePanTranslation: (CGFloat)translation
 {
+    //move a content view
+    self.contentView.center = CGPointMake(_originalContentViewCenter.x + translation, _originalContentViewCenter.y);
+    
+    //will move action indicator image views
+    CGFloat actionIndicatorsTranslation = 0.0f;
+    if (translation > kFIRST_CHECKPOINT_LENGTH) {
+        actionIndicatorsTranslation = translation - kFIRST_CHECKPOINT_LENGTH;
+    } else if (translation < - kFIRST_CHECKPOINT_LENGTH) {
+        actionIndicatorsTranslation = translation + kFIRST_CHECKPOINT_LENGTH;
+    }
+
+    
+    //move action indicator image views
+    _leftActionIndicatorView.center = CGPointMake(_originalLeftActionIndicatorCenter.x + actionIndicatorsTranslation, _originalLeftActionIndicatorCenter.y);
+    _rightActionIndicatorView.center = CGPointMake(_originalRightActionIndicatorCenter.x + actionIndicatorsTranslation, _originalRightActionIndicatorCenter.y);
     
     
+    
+    //left long
     if (YES == _leftLongSwipeOccured) {
         _coloredView.backgroundColor = _leftLongActionColor;
         _rightActionIndicatorView.image = _leftLongActionImage;
     }
+    //left
+     else if (YES == _leftSwipeOccured) {
+        _coloredView.backgroundColor = _leftActionColor;
+        _rightActionIndicatorView.image = _leftActionImage;
+    }
+    //right long
     else if (YES == _rightLongSwipeOccured) {
         _coloredView.backgroundColor = _rightLongActionColor;
         _leftActionIndicatorView.image = _rightLongActionImage;
     }
-    else if (offset > 0) {
+    //right
+    else if (YES == _rightSwipeOccured) {
         _coloredView.backgroundColor = _rightActionColor;
         _leftActionIndicatorView.image = _rightActionImage;
     }
-    else if (offset < 0) {
-        _coloredView.backgroundColor = _leftActionColor;
-        _rightActionIndicatorView.image = _leftActionImage;
-    } else {
-        _coloredView.backgroundColor = kDEFAULT_COLOR();
-        _leftActionIndicatorView.image = nil;
-        _rightActionIndicatorView.image = nil;        
+    
+    //no actions registered yet
+    else {
+        //left too small        
+        if (translation < 0) {
+            if (_leftSwipeAction != DialogItemCellActionNone) {
+                _coloredView.backgroundColor = kNO_ACTION_COLOR();
+            } else {
+                _coloredView.backgroundColor = kDEFAULT_COLOR();
+            }
+            _rightActionIndicatorView.image = _leftActionImage;
+        }
+        //right too small
+        else if (translation > 0) {
+            if (_rightSwipeAction != DialogItemCellActionNone) {
+                _coloredView.backgroundColor = kNO_ACTION_COLOR();
+            } else {
+                _coloredView.backgroundColor = kDEFAULT_COLOR();
+            }
+            _leftActionIndicatorView.image = _rightActionImage;
+        }
+        //zero
+        else {
+            _coloredView.backgroundColor = kDEFAULT_COLOR();
+            _leftActionIndicatorView.image = nil;
+            _rightActionIndicatorView.image = nil;        
+        }
     }
 }
 
@@ -445,24 +503,38 @@
 -(void)moveOnDirection: (DialogItemCellMoveDirectionType)direction completion: (void (^)(BOOL finished))completionBlock
 {
     CGPoint newContentViewCenter = CGPointZero;
+    CGPoint newLeftIndicatorViewCenter = CGPointZero;
+    CGPoint newRightIndicatorViewCenter = CGPointZero;
     
     switch (direction) {
         case DialogItemCellMoveDirectionLeft:
-            newContentViewCenter = CGPointMake(- 3 * _originalContentViewCenter.x, _originalContentViewCenter.y);
+            newContentViewCenter = CGPointMake( -(_originalContentViewCenter.x + self.frame.size.width + kFIRST_CHECKPOINT_LENGTH), _originalContentViewCenter.y);
+            newLeftIndicatorViewCenter = CGPointMake( -(_originalLeftActionIndicatorCenter.x + self.frame.size.width), _originalLeftActionIndicatorCenter.y);
+            newRightIndicatorViewCenter = CGPointMake( - (_originalRightActionIndicatorCenter.x + self.frame.size.width), _originalRightActionIndicatorCenter.y);
             break;
+            
         case DialogItemCellMoveDirectionCenter:
             newContentViewCenter = _originalContentViewCenter;
+            newLeftIndicatorViewCenter = _originalLeftActionIndicatorCenter;
+            newRightIndicatorViewCenter = _originalRightActionIndicatorCenter;
             break;
+            
         case DialogItemCellMoveDirectionRight:
-            newContentViewCenter = CGPointMake( 3 * _originalContentViewCenter.x, _originalContentViewCenter.y);
+            newContentViewCenter = CGPointMake( _originalContentViewCenter.x + self.frame.size.width + kFIRST_CHECKPOINT_LENGTH, _originalContentViewCenter.y);
+            newLeftIndicatorViewCenter = CGPointMake(_originalLeftActionIndicatorCenter.x + self.frame.size.width, _originalLeftActionIndicatorCenter.y);
+            newRightIndicatorViewCenter = CGPointMake(_originalRightActionIndicatorCenter.x + self.frame.size.width, _originalRightActionIndicatorCenter.y);
             break;
         default:
             break;
     }
     
-    [UIView animateWithDuration: kANIMATION_DURATION delay: 0.0 options:UIViewAnimationOptionCurveEaseInOut animations: ^{
-        //move our content view
+    [UIView animateWithDuration: 1.3 * kANIMATION_DURATION delay: 0.0 options:UIViewAnimationOptionCurveEaseInOut animations: ^{
+
+        //move views
         self.contentView.center = newContentViewCenter;
+        _leftActionIndicatorView.center = newLeftIndicatorViewCenter;
+        _rightActionIndicatorView.center = newRightIndicatorViewCenter;
+   
     } completion: ^(BOOL finished) {
         
         _leftSwipeOccured = NO;
