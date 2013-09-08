@@ -17,6 +17,6 @@
 
 -(void)downloadMostRecentMailsForMailBoxItem: (MailBoxItem *)mailboxItem;
 -(void)downloadMoreMailsForMailBoxItem: (MailBoxItem *)mailboxItem;
--(void)cancellAllDownloads;
+-(void)cancelAllDownloads;
 
 @end

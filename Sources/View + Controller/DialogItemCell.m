@@ -24,9 +24,9 @@
 #define kFIRST_CHECKPOINT_LENGTH 60.0f
 #define kSECOND_CHECKPOINT_LENGTH 185.0f
 
-#define kARCHIVE_COLOR()    [UIColor colorWithRed: 0.9 green: 0.9 blue: 0.06 alpha: 1.0]
-#define kINBOX_COLOR()      [UIColor colorWithRed: 0.1 green: 1.0 blue: 0.1 alpha: 1.0]
-#define kTRASH_COLOR()      [UIColor colorWithRed: 1.0 green: 0.1 blue: 0.1 alpha: 1.0]
+#define kARCHIVE_COLOR()    [UIColor colorWithRed: 0.93 green: 0.93 blue: 0.0 alpha: 1.0]
+#define kINBOX_COLOR()      [UIColor colorWithRed: 0.1 green: 0.8 blue: 0.1 alpha: 1.0]
+#define kTRASH_COLOR()      [UIColor colorWithRed: 0.6 green: 0.1 blue: 0.1 alpha: 1.0]
 #define kNO_ACTION_COLOR()  [UIColor colorWithWhite: 0.75 alpha: 1.0]
 #define kDEFAULT_COLOR()    [UIColor whiteColor]
 

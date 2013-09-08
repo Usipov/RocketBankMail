@@ -498,7 +498,7 @@ NSString *const BatchSizeKey = @"UserDefaultsBatchSizeKey";
 
 -(void)refreshTapped:(UIButton *)sender
 {
-    [[MailDownloadManager sharedDownloader] cancellAllDownloads];
+    [[MailDownloadManager sharedDownloader] cancelAllDownloads];
     _willHandlePlaceHolderCell = NO; //stop requesting more data when scrolled to bottom
     [[CoreDataManager sharedManager] clearCoreData];
     [self reloadData];

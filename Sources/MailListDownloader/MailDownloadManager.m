@@ -154,7 +154,9 @@
                     }
                     
                     if (oldMailItem) {
+                        #ifdef DEBUG
                         NSLog(@"didIntersectNextTimestampItem = YES");
+                        #endif
                         //means that we did intersect a following timestamp item
                         didIntersectNextTimestampItem = YES;
                     }
@@ -174,7 +176,7 @@
                 } else {
                     if (mailItemsData.count > 0) {
                         //increase page count of a timestamp item (which is recording this download session)
-                        timestamp.pagesDownloadedSinceRelevantItem = [NSNumber numberWithInteger:timestamp.pagesDownloadedSinceRelevantItem.integerValue + 1];
+                        timestamp.pagesDownloadedSinceRelevantItem = [NSNumber numberWithInteger: timestamp.pagesDownloadedSinceRelevantItem.integerValue + 1];
                     }
                 }
                 
@@ -190,7 +192,7 @@
     }
 }
 
--(void)cancellAllDownloads
+-(void)cancelAllDownloads
 {
     [_mailPageDownloaders enumerateKeysAndObjectsUsingBlock: ^(id key, id obj, BOOL *stop){
         MailPageDownloader *downloader = (MailPageDownloader *)obj;

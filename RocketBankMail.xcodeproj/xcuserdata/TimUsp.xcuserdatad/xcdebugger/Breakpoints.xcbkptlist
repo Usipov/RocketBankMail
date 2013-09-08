@@ -411,11 +411,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "Sources/MailListDownloader/MailDownloadManager.m"
-         timestampString = "400232088.215597"
+         timestampString = "400325479.2368"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "265"
-         endingLineNumber = "265"
+         startingLineNumber = "267"
+         endingLineNumber = "267"
          landmarkName = "-newestTimestampItemForMailBoxItem:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -437,11 +437,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "Sources/MailListDownloader/MailDownloadManager.m"
-         timestampString = "400232088.215597"
+         timestampString = "400325479.2368"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "216"
-         endingLineNumber = "216"
+         startingLineNumber = "218"
+         endingLineNumber = "218"
          landmarkName = "-setDownloader:forMailboxItem:"
          landmarkType = "5">
       </FileBreakpoint>
