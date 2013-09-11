@@ -6,18 +6,23 @@
 //  Copyright (c) 2013 Usipov Timur. All rights reserved.
 //
 
-#import "CustomSegmentedControl.h"
+#import "SegmentedControl.h"
 
-@interface CustomSegmentedControl () {
-    id<CustomSegmentedControlDelegate> _segmentedControlDelegate;
+@interface SegmentedControl () {
+    id<SegmentedControlDelegate> _segmentedControlDelegate;
 }
+
+-(void)dehighlightAllButtonsExcept: (UIButton*)selectedButton;
+-(void)touchDownAction: (UIButton*)button;
+-(void)touchUpInsideAction: (UIButton*)button;
+-(void)otherTouchesAction: (UIButton*)button;
 
 @end
 
-@implementation CustomSegmentedControl
+@implementation SegmentedControl
 @synthesize buttons = _buttons;
 
-- (id) initWithSegmentCount:(NSUInteger)segmentCount segmentsize:(CGSize)segmentsize dividerImage:(UIImage*)dividerImage tag:(NSInteger)objectTag delegate:(NSObject <CustomSegmentedControlDelegate>*)customSegmentedControlDelegate
+-(id)initWithSegmentCount:(NSUInteger)segmentCount segmentsize:(CGSize)segmentsize dividerImage:(UIImage*)dividerImage tag:(NSInteger)objectTag delegate:(NSObject <SegmentedControlDelegate>*)segmentedControlDelegate
 {
     self = [super init];
     if (self) {
@@ -25,7 +30,7 @@
         self.tag = objectTag;
         
         // Set the delegate
-        _segmentedControlDelegate = customSegmentedControlDelegate;
+        _segmentedControlDelegate = segmentedControlDelegate;
         
         // Adjust our width based on the number of segments & the width of each segment and the sepearator
         self.frame = CGRectMake(0, 0, (segmentsize.width * segmentCount) + (dividerImage.size.width * (segmentCount - 1)), segmentsize.height);
@@ -39,7 +44,7 @@
         // Iterate through each segment
         for (NSUInteger i = 0 ; i < segmentCount ; i++) {
             // Ask the delegate to create a button
-            UIButton* button = [_segmentedControlDelegate buttonFor: self atIndex: i];
+            UIButton* button = [_segmentedControlDelegate segmentedControl: self buttonAtIndex: i];
             
             // Register for touch events
             [button addTarget: self action: @selector(touchDownAction:) forControlEvents: UIControlEventTouchDown];
@@ -71,7 +76,18 @@
     return self;
 }
 
--(void)dimAllButtonsExcept:(UIButton*)selectedButton
+-(void)setSelectedButtonAtIndex: (NSUInteger)index
+{
+    if (_buttons.count > index) {
+        UIButton *selectedButton = _buttons[index];
+        [self dehighlightAllButtonsExcept: selectedButton];
+    }
+    
+}
+
+#pragma mark - private methods
+
+-(void)dehighlightAllButtonsExcept: (UIButton*)selectedButton
 {
     for (UIButton* button in _buttons) {
         if (button == selectedButton) {
@@ -84,25 +100,25 @@
     }
 }
 
-- (void)touchDownAction:(UIButton*)button
+-(void)touchDownAction:(UIButton*)button
 {
-    [self dimAllButtonsExcept:button];
+    [self dehighlightAllButtonsExcept: button];
     
-    if ([_segmentedControlDelegate respondsToSelector: @selector(touchDownAtSegmentIndex:)])
-        [_segmentedControlDelegate touchDownAtSegmentIndex: [_buttons indexOfObject: button]];
+    if ([_segmentedControlDelegate respondsToSelector: @selector(segmentedControl: touchDownAtSegmentIndex:)])
+        [_segmentedControlDelegate  segmentedControl: self touchDownAtSegmentIndex: [_buttons indexOfObject: button]];
 }
 
-- (void)touchUpInsideAction:(UIButton*)button
+-(void)touchUpInsideAction:(UIButton*)button
 {
-    [self dimAllButtonsExcept:button];
+    [self dehighlightAllButtonsExcept: button];
     
-    if ([_segmentedControlDelegate respondsToSelector:@selector(touchUpInsideSegmentIndex:)])
-        [_segmentedControlDelegate touchUpInsideSegmentIndex: [_buttons indexOfObject: button]];
+    if ([_segmentedControlDelegate respondsToSelector: @selector(touchUpInsideSegmentIndex:)])
+        [_segmentedControlDelegate segmentedControl: self touchUpInsideSegmentIndex: [_buttons indexOfObject: button]];
 }
 
-- (void)otherTouchesAction:(UIButton*)button
+-(void)otherTouchesAction:(UIButton*)button
 {
-    [self dimAllButtonsExcept:button];
+    [self dehighlightAllButtonsExcept: button];
 }
 
 

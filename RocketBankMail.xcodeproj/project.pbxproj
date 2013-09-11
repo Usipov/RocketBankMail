@@ -59,7 +59,7 @@
 		17EC6B7117DA4F3900B4E357 /* segm_right@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 17EC6B6517DA4F3900B4E357 /* segm_right@2x.png */; };
 		17EC6B7217DA4F3900B4E357 /* segm_right_hl.png in Resources */ = {isa = PBXBuildFile; fileRef = 17EC6B6617DA4F3900B4E357 /* segm_right_hl.png */; };
 		17EC6B7317DA4F3900B4E357 /* segm_right_hl@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 17EC6B6717DA4F3900B4E357 /* segm_right_hl@2x.png */; };
-		17EC6B7617DA4F6B00B4E357 /* CustomSegmentedControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 17EC6B7517DA4F6B00B4E357 /* CustomSegmentedControl.m */; };
+		17EC6B7617DA4F6B00B4E357 /* SegmentedControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 17EC6B7517DA4F6B00B4E357 /* SegmentedControl.m */; };
 		17EC6B7917DA5F9300B4E357 /* star.png in Resources */ = {isa = PBXBuildFile; fileRef = 17EC6B7717DA5F9300B4E357 /* star.png */; };
 		17EC6B7A17DA5F9300B4E357 /* star@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 17EC6B7817DA5F9300B4E357 /* star@2x.png */; };
 		17EC6B8117DB257C00B4E357 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17EC6B8017DB257B00B4E357 /* QuartzCore.framework */; };
@@ -139,8 +139,8 @@
 		17EC6B6517DA4F3900B4E357 /* segm_right@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "segm_right@2x.png"; sourceTree = "<group>"; };
 		17EC6B6617DA4F3900B4E357 /* segm_right_hl.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = segm_right_hl.png; sourceTree = "<group>"; };
 		17EC6B6717DA4F3900B4E357 /* segm_right_hl@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "segm_right_hl@2x.png"; sourceTree = "<group>"; };
-		17EC6B7417DA4F6B00B4E357 /* CustomSegmentedControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CustomSegmentedControl.h; path = "Sources/View + Controller/CustomSegmentedControl.h"; sourceTree = SOURCE_ROOT; };
-		17EC6B7517DA4F6B00B4E357 /* CustomSegmentedControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CustomSegmentedControl.m; path = "Sources/View + Controller/CustomSegmentedControl.m"; sourceTree = SOURCE_ROOT; };
+		17EC6B7417DA4F6B00B4E357 /* SegmentedControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SegmentedControl.h; path = "Sources/View + Controller/SegmentedControl.h"; sourceTree = SOURCE_ROOT; };
+		17EC6B7517DA4F6B00B4E357 /* SegmentedControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SegmentedControl.m; path = "Sources/View + Controller/SegmentedControl.m"; sourceTree = SOURCE_ROOT; };
 		17EC6B7717DA5F9300B4E357 /* star.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = star.png; sourceTree = "<group>"; };
 		17EC6B7817DA5F9300B4E357 /* star@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "star@2x.png"; sourceTree = "<group>"; };
 		17EC6B8017DB257B00B4E357 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
@@ -259,8 +259,8 @@
 				17E436F717D220DC0096E52D /* PlaceHolderCell.m */,
 				17E4370317D233F40096E52D /* DialogItemCell.h */,
 				17E4370417D233F40096E52D /* DialogItemCell.m */,
-				17EC6B7417DA4F6B00B4E357 /* CustomSegmentedControl.h */,
-				17EC6B7517DA4F6B00B4E357 /* CustomSegmentedControl.m */,
+				17EC6B7417DA4F6B00B4E357 /* SegmentedControl.h */,
+				17EC6B7517DA4F6B00B4E357 /* SegmentedControl.m */,
 			);
 			name = "View + Controller";
 			sourceTree = "<group>";
@@ -453,7 +453,7 @@
 				17E4372E17D6616E0096E52D /* MailBoxTimestampItem.m in Sources */,
 				17E4374B17D749850096E52D /* DialogItem.m in Sources */,
 				17E4374E17D749920096E52D /* MailBoxItem.m in Sources */,
-				17EC6B7617DA4F6B00B4E357 /* CustomSegmentedControl.m in Sources */,
+				17EC6B7617DA4F6B00B4E357 /* SegmentedControl.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

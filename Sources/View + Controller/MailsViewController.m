@@ -14,17 +14,17 @@
 #import "DialogItemCell.h"
 #import "MailsView.h"
 #import "AppDelegate.h"
-#import "CustomSegmentedControl.h"
+#import "SegmentedControl.h"
 
 NSString *const BatchSizeKey = @"UserDefaultsBatchSizeKey";
 
-@interface MailsViewController () <UITableViewDataSource, UITableViewDelegate, NSFetchedResultsControllerDelegate, DialogItemCellDelegate, CustomSegmentedControlDelegate> {
+@interface MailsViewController () <UITableViewDataSource, UITableViewDelegate, NSFetchedResultsControllerDelegate, DialogItemCellDelegate, SegmentedControlDelegate> {
     BOOL                         _isHandlingSingleMailboxType;
     NSArray                     *_mailboxes;
     NSArray                     *_fetchedResultsControllers; //fetch dialog items
     MailsView                   *_mailsView;
     UITableViewStyle             _tableViewStyle;
-    CustomSegmentedControl      *_control;
+    SegmentedControl      *_segmentedControl;
     NSDictionary                *_controlData;
     BOOL                         _willHandlePlaceHolderCell;
 }
@@ -516,6 +516,8 @@ NSString *const BatchSizeKey = @"UserDefaultsBatchSizeKey";
 {
     [[MailDownloadManager sharedDownloader] cancelAllDownloads];
     _willHandlePlaceHolderCell = NO; //stop requesting more data when scrolled to bottom
+    [_segmentedControl setSelectedButtonAtIndex: TableIndexMid];
+
     [[CoreDataManager sharedManager] clearCoreData];
     [self reloadData];
 }
@@ -544,15 +546,14 @@ NSString *const BatchSizeKey = @"UserDefaultsBatchSizeKey";
          dividerImageName,                                        kSegmDividerImage,
          [NSNumber numberWithFloat: 0.0],                        kSegmCapWidth, nil];
     
-    _control = [[CustomSegmentedControl alloc] initWithSegmentCount: titles.count segmentsize: segmentSize dividerImage: [UIImage imageNamed: dividerImageName] tag: 0 delegate: self];
+    _segmentedControl = [[SegmentedControl alloc] initWithSegmentCount: titles.count segmentsize: segmentSize dividerImage: [UIImage imageNamed: dividerImageName] tag: 0 delegate: self];
     
-    self.navigationItem.titleView = _control;
+    self.navigationItem.titleView = _segmentedControl;
 }
 
 
-#pragma mark CustomSegmentedControlDelegate
-
--(UIButton *)buttonFor: (CustomSegmentedControl*)segmentedControl atIndex: (NSUInteger)segmentIndex;
+#pragma mark SegmentedControlDelegate
+-(UIButton *)segmentedControl: (SegmentedControl*)segmentedControl buttonAtIndex: (NSUInteger)segmentIndex
 {
     NSArray* titles = [_controlData objectForKey: kSegmTitles];
     
@@ -587,19 +588,18 @@ NSString *const BatchSizeKey = @"UserDefaultsBatchSizeKey";
     [button setImage: buttonPressedImage forState: UIControlStateSelected];
     button.adjustsImageWhenHighlighted = NO;
     
-    if (segmentIndex == TableIndexMid)
-        button.selected = YES;
+    if (segmentIndex == TableIndexMid) { button.selected = YES; }
     return button;
 }
 
-- (void) touchUpInsideSegmentIndex:(NSUInteger)segmentIndex
+-(void)segmentedControl: (SegmentedControl*)segmentedControl touchUpInsideSegmentIndex:(NSUInteger)segmentIndex
 {
     [_mailsView setSelectedTableAtIndex: segmentIndex animated: YES];
 }
 
-- (void) touchDownAtSegmentIndex:(NSUInteger)segmentIndex
+-(void)segmentedControl: (SegmentedControl*)segmentedControl touchDownAtSegmentIndex:(NSUInteger)segmentIndex
 {
-    //
+    [_mailsView setSelectedTableAtIndex: segmentIndex animated: YES];
 }
 
 

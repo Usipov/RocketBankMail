@@ -28,20 +28,21 @@ typedef enum {
 } CapLocation;
 
 
-@class CustomSegmentedControl;
-@protocol CustomSegmentedControlDelegate <NSObject>
+@class SegmentedControl;
+@protocol SegmentedControlDelegate <NSObject>
 
-- (UIButton *)buttonFor:(CustomSegmentedControl *)segmentedControl atIndex: (NSUInteger)segmentIndex;
+-(UIButton *)segmentedControl: (SegmentedControl*)segmentedControl buttonAtIndex: (NSUInteger)segmentIndex;
 
 @optional
-- (void)touchUpInsideSegmentIndex:(NSUInteger)segmentIndex;
-- (void)touchDownAtSegmentIndex:(NSUInteger)segmentIndex;
+- (void)segmentedControl: (SegmentedControl*)segmentedControl touchUpInsideSegmentIndex:(NSUInteger)segmentIndex;
+- (void)segmentedControl: (SegmentedControl*)segmentedControl touchDownAtSegmentIndex:(NSUInteger)segmentIndex;
 @end
 
-@interface CustomSegmentedControl : UIView 
+@interface SegmentedControl : UIView 
 
 @property (nonatomic, retain) NSMutableArray* buttons;
 
--(id)initWithSegmentCount:(NSUInteger)segmentCount segmentsize:(CGSize)segmentsize dividerImage:(UIImage*)dividerImage tag:(NSInteger)objectTag delegate:(NSObject <CustomSegmentedControlDelegate>*)customSegmentedControlDelegate;
+-(id)initWithSegmentCount:(NSUInteger)segmentCount segmentsize:(CGSize)segmentsize dividerImage:(UIImage*)dividerImage tag:(NSInteger)objectTag delegate:(NSObject <SegmentedControlDelegate>*)segmentedControlDelegate;
+-(void)setSelectedButtonAtIndex: (NSUInteger)index;
 
 @end
