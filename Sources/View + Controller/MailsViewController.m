@@ -515,10 +515,17 @@ NSString *const BatchSizeKey = @"UserDefaultsBatchSizeKey";
 -(void)refreshTapped:(UIButton *)sender
 {
     [[MailDownloadManager sharedDownloader] cancelAllDownloads];
-    _willHandlePlaceHolderCell = NO; //stop requesting more data when scrolled to bottom
-    [_segmentedControl setSelectedButtonAtIndex: TableIndexMid];
-
+    
+    //stop requesting more data when scrolled to bottom
+    _willHandlePlaceHolderCell = NO;
+    
+    //clean core data
     [[CoreDataManager sharedManager] clearCoreData];
+    
+    //switch to a middle table (inbox table)
+    [_segmentedControl setSelectedButtonAtIndex: TableIndexMid];
+    [_mailsView setSelectedTableAtIndex: TableIndexMid animated: YES];
+    
     [self reloadData];
 }
 
