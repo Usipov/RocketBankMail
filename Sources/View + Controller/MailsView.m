@@ -16,7 +16,10 @@
 
 @end
 
+
 @implementation MailsView
+
+@synthesize selectedTableIndex = _selectedIndex;
 
 -(id)initWithFrame:(CGRect)frame mailboxItems:(NSArray *)mailboxItems tableStyle:(UITableViewStyle)style tableDelegate:(id<UITableViewDelegate>)delegate tableDataSource:(id<UITableViewDataSource>)dataSource
 {

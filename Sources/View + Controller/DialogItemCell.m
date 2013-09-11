@@ -238,6 +238,12 @@
     self.imageView.hidden = ! anyMail.starred.boolValue;
 }
 
+-(void)cancelGestureRecognizer
+{
+    _panRecognizer.enabled = NO; //will transit recognizer to a cancelled state
+    _panRecognizer.enabled = YES;
+}
+
 #pragma mark - private methods
 
 -(NSString *)stringFromDate: (NSDate *)date
@@ -333,7 +339,11 @@
         } else {
             [self handleTriggeredAction];
         }
-        
+    }
+    
+    if (gesture.state == UIGestureRecognizerStateCancelled) {
+        //go to origin
+        [self moveOnDirection: DialogItemCellMoveDirectionCenter completion: NULL];
     }
 }
 

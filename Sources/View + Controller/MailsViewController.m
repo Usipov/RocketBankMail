@@ -139,6 +139,20 @@ NSString *const BatchSizeKey = @"UserDefaultsBatchSizeKey";
     }
 }
 
+-(void)willRotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration
+{
+    [super willRotateToInterfaceOrientation: toInterfaceOrientation duration: duration];
+    
+    //cancell touches on a visible table
+    UITableView *table = [_mailsView tableViewAtIndex: _mailsView.selectedTableIndex];
+    [table.visibleCells enumerateObjectsUsingBlock: ^(id obj, NSUInteger idx, BOOL *stop) {
+        UITableViewCell *cell = (UITableViewCell *)obj;
+        if ([cell isKindOfClass: [DialogItemCell class]]) {
+            [(DialogItemCell *)cell cancelGestureRecognizer];
+        }
+    }];
+}
+
 #pragma mark - private methods
 
 -(void)reloadData

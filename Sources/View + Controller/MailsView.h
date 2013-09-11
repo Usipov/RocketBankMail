@@ -22,5 +22,6 @@ enum TableIndexes {
 -(UITableView *)tableViewAtIndex: (NSUInteger)index;
 -(NSUInteger)indexOfTableView: (UITableView *)tableView;
 
+@property(nonatomic, readonly) NSUInteger selectedTableIndex;
 
 @end

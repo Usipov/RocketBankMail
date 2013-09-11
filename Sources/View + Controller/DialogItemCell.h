@@ -33,6 +33,7 @@ typedef enum {
 @interface DialogItemCell : UITableViewCell
 
 -(void)updateOnDialogItem: (DialogItem *)dialog;
+-(void)cancelGestureRecognizer;
 
 @property (nonatomic) DialogItemCellActionType leftSwipeAction;
 @property (nonatomic) DialogItemCellActionType leftLongSwipeAction;
