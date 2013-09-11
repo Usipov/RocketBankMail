@@ -20,6 +20,8 @@
         self.textLabel.font = [UIFont fontWithName: @"ChevinCyrillic-Bold" size: 22.0f];
         self.textLabel.shadowColor = [UIColor colorWithWhite: 0.3 alpha: 0.9];
         self.textLabel.shadowOffset = CGSizeMake(0.0f, -1.0f);
+        
+        self.selectionStyle = UITableViewCellSelectionStyleNone;
     }
     return self;
 }

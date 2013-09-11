@@ -115,7 +115,7 @@
         _accessoryImageView = [[UIImageView alloc] initWithImage: [UIImage imageNamed: @"accessory"]];
         [self.contentView addSubview: _accessoryImageView];
         
-        self.selectionStyle = UITableViewCellSelectionStyleGray;
+        self.selectionStyle = UITableViewCellSelectionStyleNone;
         
         self.textLabel.numberOfLines = 1;
         self.textLabel.font = [UIFont fontWithName: @"ChevinCyrillic-Bold" size: 20.0f];

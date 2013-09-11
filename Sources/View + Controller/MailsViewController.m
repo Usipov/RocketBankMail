@@ -143,7 +143,7 @@ NSString *const BatchSizeKey = @"UserDefaultsBatchSizeKey";
 {
     [super willRotateToInterfaceOrientation: toInterfaceOrientation duration: duration];
     
-    //cancell touches on a visible table
+    //cancel touches on a visible table
     UITableView *table = [_mailsView tableViewAtIndex: _mailsView.selectedTableIndex];
     [table.visibleCells enumerateObjectsUsingBlock: ^(id obj, NSUInteger idx, BOOL *stop) {
         UITableViewCell *cell = (UITableViewCell *)obj;
