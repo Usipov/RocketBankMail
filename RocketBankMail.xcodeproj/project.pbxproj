@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		170919F817E05CDC008E98BF /* segm_divider.png in Resources */ = {isa = PBXBuildFile; fileRef = 170919F617E05CDC008E98BF /* segm_divider.png */; };
+		170919F917E05CDC008E98BF /* segm_divider@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 170919F717E05CDC008E98BF /* segm_divider@2x.png */; };
 		177BEDC017DA236000A50EFB /* ChevinCyrillic-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 177BEDBB17DA236000A50EFB /* ChevinCyrillic-Bold.ttf */; };
 		177BEDC117DA236000A50EFB /* ChevinCyrillic-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 177BEDBC17DA236000A50EFB /* ChevinCyrillic-BoldItalic.ttf */; };
 		177BEDC217DA236000A50EFB /* ChevinCyrillic-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 177BEDBD17DA236000A50EFB /* ChevinCyrillic-Light.ttf */; };
@@ -66,6 +68,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		170919F617E05CDC008E98BF /* segm_divider.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = segm_divider.png; sourceTree = "<group>"; };
+		170919F717E05CDC008E98BF /* segm_divider@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "segm_divider@2x.png"; sourceTree = "<group>"; };
 		177BEDBB17DA236000A50EFB /* ChevinCyrillic-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ChevinCyrillic-Bold.ttf"; sourceTree = "<group>"; };
 		177BEDBC17DA236000A50EFB /* ChevinCyrillic-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ChevinCyrillic-BoldItalic.ttf"; sourceTree = "<group>"; };
 		177BEDBD17DA236000A50EFB /* ChevinCyrillic-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ChevinCyrillic-Light.ttf"; sourceTree = "<group>"; };
@@ -309,6 +313,8 @@
 		17EC6B5B17DA4F3900B4E357 /* Segmented control */ = {
 			isa = PBXGroup;
 			children = (
+				170919F617E05CDC008E98BF /* segm_divider.png */,
+				170919F717E05CDC008E98BF /* segm_divider@2x.png */,
 				17EC6B5C17DA4F3900B4E357 /* segm_left.png */,
 				17EC6B5D17DA4F3900B4E357 /* segm_left@2x.png */,
 				17EC6B5E17DA4F3900B4E357 /* segm_left_hl.png */,
@@ -413,6 +419,8 @@
 				17EC6B8E17DB315900B4E357 /* accessory@2x.png in Resources */,
 				17EC6B9117DB4ABE00B4E357 /* inbox.png in Resources */,
 				17EC6B9217DB4ABE00B4E357 /* inbox@2x.png in Resources */,
+				170919F817E05CDC008E98BF /* segm_divider.png in Resources */,
+				170919F917E05CDC008E98BF /* segm_divider@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

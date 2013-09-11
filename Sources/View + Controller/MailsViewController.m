@@ -528,6 +528,7 @@ NSString *const BatchSizeKey = @"UserDefaultsBatchSizeKey";
 {
     NSArray *titles = @[@"", @"", @""];
     CGSize segmentSize = CGSizeMake(52.0f, 31.0f);
+    NSString *dividerImageName = @"segm_divider";
     
     _controlData = [NSDictionary dictionaryWithObjectsAndKeys:
          titles,                                                 kSegmTitles,
@@ -538,9 +539,10 @@ NSString *const BatchSizeKey = @"UserDefaultsBatchSizeKey";
          @"segm_mid_hl",                                         kSegmButtonImageCH,
          @"segm_right",                                          kSegmButtonImageR,
          @"segm_right_hl",                                       kSegmButtonImageRH,
+         dividerImageName,                                        kSegmDividerImage,
          [NSNumber numberWithFloat: 0.0],                        kSegmCapWidth, nil];
     
-    _control = [[CustomSegmentedControl alloc] initWithSegmentCount: titles.count segmentsize: segmentSize dividerImage: nil tag: 0 delegate: self];
+    _control = [[CustomSegmentedControl alloc] initWithSegmentCount: titles.count segmentsize: segmentSize dividerImage: [UIImage imageNamed: dividerImageName] tag: 0 delegate: self];
     
     self.navigationItem.titleView = _control;
 }
