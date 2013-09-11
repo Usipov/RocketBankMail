@@ -78,6 +78,8 @@ NSString *const BatchSizeKey = @"UserDefaultsBatchSizeKey";
     button.frame = CGRectMake(0.0f, 0.0f, 30.0f, 30.0f);
     [button addTarget: self action: @selector(refreshTapped:) forControlEvents: UIControlEventTouchUpInside];
     [button setImage: [UIImage imageNamed: @"refresh-button-item"] forState: UIControlStateNormal];
+    [button setImage: [UIImage imageNamed: @"refresh-button-item_hl"] forState: UIControlStateHighlighted];
+    [button setImage: [UIImage imageNamed: @"refresh-button-item_hl"] forState: UIControlStateSelected];
     UIBarButtonItem *refreshControl = [[UIBarButtonItem alloc] initWithCustomView: button];
     self.navigationItem.rightBarButtonItem = refreshControl;
     
